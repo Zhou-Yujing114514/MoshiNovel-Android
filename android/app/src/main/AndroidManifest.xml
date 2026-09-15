@@ -4,7 +4,7 @@
         android:label="摩柿小说"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:allowBackup="false"
+        android:allowBackup="false">
         <activity
             android:name=".MainActivity"
             android:exported="true"
