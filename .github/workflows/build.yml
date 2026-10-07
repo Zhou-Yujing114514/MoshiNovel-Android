@@ -51,6 +51,13 @@ jobs:
       - name: Rename APK
         run: cp build/app/outputs/flutter-apk/app-release.apk MoshiNovel-Android.apk
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MoshiNovel-Android
+          path: MoshiNovel-Android.apk
+          retention-days: 30
+
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
